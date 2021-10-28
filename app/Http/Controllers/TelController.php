@@ -55,14 +55,18 @@ class TelController extends Controller
      */
     public function update(Request $request, Tel $tel)
     {
+
         $request->validate([
             'name' => 'required',
-            'tel' => 'required'
+            'phone' => 'required'
         ]);
 
-        $tel->update($request->all());
+        Tel::where('id' , $tel->id)->update([
+           'name' => $request->name,
+           'phone' => $request->phone
+        ]);
 
-        return response('', 200);
+        return response('Updated Successfully', 200);
     }
 
     /**

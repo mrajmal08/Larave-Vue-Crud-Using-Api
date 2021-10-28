@@ -34,7 +34,6 @@
     </div>
 </template>
 
-
 <script>
 
 export default {
@@ -66,8 +65,9 @@ export default {
                 method = axios.put
                 url = `/api/tel/${this.temp_id}`
             }
+
             try {
-                method(url, this.item)
+                var reslt = method(url, this.item)
                     .then(res => {
                         this.fetchAll()
                         this.item = {

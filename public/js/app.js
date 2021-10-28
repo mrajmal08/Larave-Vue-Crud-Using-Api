@@ -2136,7 +2136,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Practice",
   data: function data() {
@@ -2174,7 +2173,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       try {
-        method(url, this.item).then(function (res) {
+        var reslt = method(url, this.item).then(function (res) {
           _this2.fetchAll();
 
           _this2.item = {
